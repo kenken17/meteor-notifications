@@ -1,0 +1,15 @@
+<template name="MNotificationsTemplate">
+	{{> Template.dynamic template=style}}
+</template>
+
+<template name="_MNotificationsDefault">
+	<div class="container notification notification-default">
+		{{#each notifications}}
+		<div class="row">
+			<div class="col-md-12">
+				<div class="{{data.class}}">{{data.message}}</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</template>
