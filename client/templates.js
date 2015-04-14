@@ -10,7 +10,15 @@ Template.MNotificationsTemplate.helpers({
 
 Template._MNotificationsDefault.helpers({
 	notifications: function() {
-		return NotificationsCollection.find();
+		var notificationsServer = NotificationsCollection.find({
+			read: false
+		}).fetch();
+
+		var notificationsClient = NotificationsClientCollection.find({
+			read: false
+		}).fetch();
+
+		return _.union(notificationsClient, notificationsServer)
 	}
 });
 

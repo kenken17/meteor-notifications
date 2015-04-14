@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'kenken:meteor-notifications',
 	summary: 'A simple notifications package.',
-	version: '1.0.0',
+	version: '1.1.0',
 	git: 'https://github.com/kenken17/meteor-notifications'
 });
 
