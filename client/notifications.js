@@ -11,6 +11,20 @@ MNotifications.show = function(opts) {
 		} else {
 			Meteor.subscribe('pubNotifications', opts);
 		}
+	}
+};
 
+MNotifications.clear = function(opts) {
+	if (opts.type) {
+		NotificationsClientCollection.update({
+			type: opts.type,
+			read: false
+		}, {
+			$set: {
+				read: true
+			}
+		}, {
+			multi: true
+		});
 	}
 };

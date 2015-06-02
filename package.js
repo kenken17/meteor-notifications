@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'kenken:meteor-notifications',
 	summary: 'A simple notifications package.',
-	version: '1.1.1',
+	version: '1.2.0',
 	git: 'https://github.com/kenken17/meteor-notifications'
 });
 
@@ -9,6 +9,7 @@ Package.onUse(function(api) {
 	api.versionsFrom('1.0');
 
 	// Meteor dependencies
+	api.use('fortawesome:fontawesome@4.3.0');
 	api.use('templating');
 	api.use('underscore');
 	api.use('mongo');
@@ -20,6 +21,7 @@ Package.onUse(function(api) {
 	api.addFiles('client/notifications.js', 'client');
 	api.addFiles('client/templates.html', 'client');
 	api.addFiles('client/templates.js', 'client');
+	api.addFiles('client/templates.css', 'client');
 
 	// Servers
 	api.addFiles('server/publications.js', 'server');
