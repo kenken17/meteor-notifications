@@ -3,11 +3,14 @@
 </template>
 
 <template name="_MNotificationsDefault">
-	<div class="container notification notification-default">
+	<div class="notification notification-default">
 		{{#each notifications}}
-		<div class="row">
+		<div class="row notificationFade">
 			<div class="col-md-12">
-				<div class="{{data.class}}">{{data.message}}</div>
+				<div class="{{data.class}}">
+					{{{data.message}}}
+					<a href="#" class="pull-right btn-close-message"><i class="fa fa-times"></i></a>
+				</div>
 			</div>
 		</div>
 		{{/each}}

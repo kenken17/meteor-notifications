@@ -1,0 +1,8 @@
+.notificationFade {
+	opacity: 1;
+	transition: opacity 300ms ease;
+}
+
+.notificationFade.off {
+	opacity: 0;
+}
